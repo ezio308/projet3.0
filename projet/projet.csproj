@@ -52,6 +52,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbddDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="depot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="depot.Designer.cs">
+      <DependentUpon>depot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="visualiser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visualiser.Designer.cs">
+      <DependentUpon>visualiser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modifier.Designer.cs">
+      <DependentUpon>modifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rechercher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rechercher.Designer.cs">
+      <DependentUpon>rechercher.cs</DependentUpon>
+    </Compile>
     <Compile Include="login page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +110,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="agent.resx">
       <DependentUpon>agent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="depot.resx">
+      <DependentUpon>depot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employe.resx">
+      <DependentUpon>employe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modifier.resx">
+      <DependentUpon>modifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rechercher.resx">
+      <DependentUpon>rechercher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login page.resx">
       <DependentUpon>login page.cs</DependentUpon>

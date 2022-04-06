@@ -31,12 +31,7 @@ namespace projet
             }
         }
 
-        private void Ajouter_Load(object sender, EventArgs e)
-        {
-            // TODO: cette ligne de code charge les données dans la table 'dbddDataSet.users'. Vous pouvez la déplacer ou la supprimer selon les besoins.
-            this.usersTableAdapter.Fill(this.dbddDataSet.users);
-
-        }
+       
 
         private void login_TextChanged(object sender, EventArgs e)
         {
