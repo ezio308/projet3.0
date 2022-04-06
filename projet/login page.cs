@@ -40,8 +40,8 @@ namespace projet
 
 
             admin admin = new admin();
-            employe agent = new employe();
-            agent employe = new agent();
+            agent agent = new agent();
+            employe employe = new employe(textBox2.Text);
 
 
             if (textBox2.Text == "" || textBox3.Text == "")
@@ -60,27 +60,35 @@ namespace projet
 
                 Reader = cmd.ExecuteReader();
                 Reader.Read();
-                string x = Convert.ToString(Reader["role"]);
+                
 
-
-                cnx.Close();
-                if (x == "1")
+                if (!Reader.HasRows)
                 {
-                    this.Hide();
-                    admin.Show();
-                }
-                else if (x == "2")
-                {
-                    this.Hide();
-                    agent.Show();
-                }
-                else if (x == "3")
-                {
-                    this.Hide();
-                    employe.Show();
-
+                    MessageBox.Show("verifier le login et le mot de passe ", "réessayer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
+                else
+                {
+                    string x = Convert.ToString(Reader["role"]);
+                    cnx.Close();
+                    if (x == "1")
+                    {
+                        this.Hide();
+                        admin.Show();
+                    }
+                    else if (x == "2")
+                    {
+                        this.Hide();
+                        agent.Show();
+                    }
+                    else if (x == "3")
+                    {
+                        this.Hide();
+                        employe.Show();
+
+
+                    }
+                }
             }
         }
 
@@ -92,6 +100,11 @@ namespace projet
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
