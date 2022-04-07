@@ -12,10 +12,10 @@ namespace projet
 {
     public partial class employe : Form
     {
-        public employe(string text)
+        public employe()
         {
             InitializeComponent();
-            shox(text);
+           
            
         }
         
@@ -25,15 +25,13 @@ namespace projet
 
         }
 
-        public void shox(string x)
-        {
-            depot depot = new depot();
-            depot.Show();
-        }
+      
 
         private void button1_Click(object sender, EventArgs e)
         {
-            shox(Text);
+            depot dep = new depot();
+            dep.Show();
+
         }
         
     }

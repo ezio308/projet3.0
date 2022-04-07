@@ -23,6 +23,9 @@ namespace projet
             InitializeComponent();
         }
 
+       
+        
+
         private void depot_Load(object sender, EventArgs e)
         {
 
@@ -40,9 +43,37 @@ namespace projet
             Deconnecter();
             cnx.Open();
             int x = int.Parse(textBox2.Text);
+            cmd = new SqlCommand("select * from users where login='" + login.Text +  "'and password ='"+password.Text+"'", cnx);
+            Reader = cmd.ExecuteReader();
+            Reader.Read();
+            
 
-            cmd = new SqlCommand("INSERT INTO demande (datedepot,frais,login) VALUES ('" +DateTime.Today+ "',"+x+")", cnx);
-            int i = cmd.ExecuteNonQuery();
+
+            
+            if (!Reader.HasRows)
+            {
+                MessageBox.Show("verifier le login et le mot de passe ", "réessayer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else
+            {
+                Deconnecter();
+                cnx.Open();
+                cmd = new SqlCommand("INSERT INTO demande (datedepot,frais,login) VALUES ('" + DateTime.Today + "'," + x + ",'" + login.Text + "')", cnx);
+                int i = cmd.ExecuteNonQuery();
+                cnx.Close();
+                if (i != 0)
+                {
+                    MessageBox.Show("demande envoyé avec succes", "cbon", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                
+                }
+                else
+                {
+                    MessageBox.Show("ajout failed", "réessayer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
         }
     }
 }

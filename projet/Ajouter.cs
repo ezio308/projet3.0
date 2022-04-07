@@ -60,6 +60,11 @@ namespace projet
                                       
           
         }
+
+        private void Ajouter_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     

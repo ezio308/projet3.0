@@ -47,9 +47,9 @@ namespace projet
             etatcivil.Text = Convert.ToString(Reader["etatcivil"]);
             codecn.Text = Convert.ToString(Reader["codecn"]);
             nomconjoint.Text = Convert.ToString(Reader["nomconjoint"]);
-            prenomconjoint.Text = Convert.ToString(Reader["prenomconjoint"]);
+            prenomconjoint.Text = Convert.ToString(Reader["prnomconjoint"]);
             numtel.Text = Convert.ToString(Reader["tel"]);
-            nbrenf.Text = Convert.ToString(Reader["nbrenfants"]);
+            nbrenf.Text = Convert.ToString(Reader["nbrenf"]);
             Date.Text = Convert.ToString(Reader["datenaiss"]);
 
 
@@ -89,19 +89,19 @@ namespace projet
 
 
 
-                    cmd = new SqlCommand("update  users set login='" + login.Text + "',password='" + password.Text + "',ID='" + id.Text + "',adresse='" + adresse.Text + "',name='" + nom.Text + "',lastname='" + prenom.Text + "',email='" + email.Text + "',etatcivil='" + etatcivil.Text + "',codecn='" + codecn.Text + "',tel='" + numtel.Text + "',role='" + z + "',grade='" + x + "',daten='" + Date.Value.ToString() + "' where ID='" + id.Text + "'", cnx);
+                    cmd = new SqlCommand("update  users set login='" + login.Text + "',password='" + password.Text + "',ID='" + id.Text + "',adresse='" + adresse.Text + "',name='" + nom.Text + "',lastname='" + prenom.Text + "',email='" + email.Text + "',etatcivil='" + etatcivil.Text + "',codecn='" + codecn.Text + "',tel='" + numtel.Text + "',role='" + z + "',grade='" + x + "',datenaiss='" + Date.Value.ToString() + "' where ID='" + id.Text + "'", cnx);
                 }
                 else
                 {
                     y = int.Parse(nbrenf.Text);
-                    cmd = new SqlCommand("update  users set login='" + login.Text + "',password='" + password.Text + "',ID='" + id.Text + "',adresse='" + adresse.Text + "',name='" + nom.Text + "',lastname='" + prenom.Text + "',email='" + email.Text + "',etatcivil='" + etatcivil.Text + "',codecn='" + codecn.Text + "',tel='" + numtel.Text + "',role='" + z + "',grade='" + x + "',daten='" + Date.Value.ToString() + "',nombreenfants='" + y + "',nomconjoint='" + nomconjoint.Text + "',prenomconjoint='" + prenomconjoint.Text + "' where ID='" + id.Text + "'", cnx);
+                    cmd = new SqlCommand("update  users set login='" + login.Text + "',password='" + password.Text + "',ID='" + id.Text + "',adresse='" + adresse.Text + "',name='" + nom.Text + "',lastname='" + prenom.Text + "',email='" + email.Text + "',etatcivil='" + etatcivil.Text + "',codecn='" + codecn.Text + "',tel='" + numtel.Text + "',role='" + z + "',grade='" + x + "',datenaiss='" + Date.Value.ToString() + "',nombreenfants='" + y + "',nomconjoint='" + nomconjoint.Text + "',prenomconjoint='" + prenomconjoint.Text + "' where ID='" + id.Text + "'", cnx);
 
                 }
             
             int i = cmd.ExecuteNonQuery();
             if (i != 0)
             {
-                MessageBox.Show("modifier effectuÃ© avec succes", "cbon", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("modifier effectuée avec succes", "cbon", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             this.Hide();

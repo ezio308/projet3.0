@@ -35,8 +35,9 @@ namespace projet
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button1.BackColor = System.Drawing.SystemColors.InfoText;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.button1.Location = new System.Drawing.Point(79, 53);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(229, 65);
@@ -47,8 +48,9 @@ namespace projet
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button2.BackColor = System.Drawing.SystemColors.InfoText;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.button2.Location = new System.Drawing.Point(79, 168);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(229, 64);
@@ -60,11 +62,13 @@ namespace projet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(403, 288);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "employe";
-            this.Text = "Form3";
+            this.Text = "employé";
             this.Load += new System.EventHandler(this.employe_Load);
             this.ResumeLayout(false);
 

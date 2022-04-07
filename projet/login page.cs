@@ -41,7 +41,7 @@ namespace projet
 
             admin admin = new admin();
             agent agent = new agent();
-            employe employe = new employe(textBox2.Text);
+            employe employe = new employe();
 
 
             if (textBox2.Text == "" || textBox3.Text == "")
@@ -105,6 +105,7 @@ namespace projet
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
+            
         }
     }
 }
