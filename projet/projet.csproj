@@ -47,28 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dbddDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbddDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="depot.cs">
+    <Compile Include="saisie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="depot.Designer.cs">
-      <DependentUpon>depot.cs</DependentUpon>
+    <Compile Include="saisie.Designer.cs">
+      <DependentUpon>saisie.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="employe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="visualiser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="visualiser.Designer.cs">
-      <DependentUpon>visualiser.cs</DependentUpon>
+    <Compile Include="employe.Designer.cs">
+      <DependentUpon>employe.cs</DependentUpon>
     </Compile>
     <Compile Include="modifier.cs">
       <SubType>Form</SubType>
@@ -94,12 +83,6 @@
     <Compile Include="admin.Designer.cs">
       <DependentUpon>admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="employe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="employe.Designer.cs">
-      <DependentUpon>employe.cs</DependentUpon>
-    </Compile>
     <Compile Include="agent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,12 +99,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="agent.resx">
       <DependentUpon>agent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="depot.resx">
-      <DependentUpon>depot.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="employe.resx">
-      <DependentUpon>employe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modifier.resx">
       <DependentUpon>modifier.cs</DependentUpon>
@@ -147,17 +124,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="dbddDataSet.xsc">
-      <DependentUpon>dbddDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="dbddDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dbddDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dbddDataSet.xss">
-      <DependentUpon>dbddDataSet.xsd</DependentUpon>
-    </None>
+    <EmbeddedResource Include="saisie.resx">
+      <DependentUpon>saisie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employe.resx">
+      <DependentUpon>employe.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

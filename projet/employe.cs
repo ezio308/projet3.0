@@ -15,24 +15,6 @@ namespace projet
         public employe()
         {
             InitializeComponent();
-           
-           
         }
-        
-
-        private void employe_Load(object sender, EventArgs e)
-        {
-
-        }
-
-      
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            depot dep = new depot();
-            dep.Show();
-
-        }
-        
     }
 }

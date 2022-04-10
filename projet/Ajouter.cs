@@ -52,13 +52,19 @@ namespace projet
             if (i != 0)
             {
                 MessageBox.Show("Ajout effectué avec succes","cbon" ,MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                cnx.Close();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("verfiez les données", "resseyez", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
 
-            cnx.Close();
-            this.Hide();
 
-                                      
-          
+
+
         }
 
         private void Ajouter_Load(object sender, EventArgs e)

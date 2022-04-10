@@ -77,12 +77,14 @@ namespace projet
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.button1.Location = new System.Drawing.Point(619, 327);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 47);
             this.button1.TabIndex = 97;
             this.button1.Text = "save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label16
@@ -359,6 +361,7 @@ namespace projet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.etatcivil);
             this.Controls.Add(this.label17);
@@ -395,6 +398,7 @@ namespace projet
             this.Controls.Add(this.prenomconjoint);
             this.Controls.Add(this.nomconjoint);
             this.Controls.Add(this.login);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "modifier";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.modifier_Load);
