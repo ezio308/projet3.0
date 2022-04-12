@@ -67,7 +67,7 @@ namespace projet
 
 
         }
-        private void dataGridView_SelectionChanged(object sender, EventArgs e)
+       /* private void dataGridView_SelectionChanged(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridView1.SelectedRows)
             {
@@ -75,7 +75,7 @@ namespace projet
                 string value2 = row.Cells[1].Value.ToString();
                 //...
             }
-        }
+        }*/
 
         private void button2_Click(object sender, EventArgs e)
         {
