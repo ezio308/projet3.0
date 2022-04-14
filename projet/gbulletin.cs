@@ -10,21 +10,20 @@ using System.Windows.Forms;
 
 namespace projet
 {
-    public partial class Form1 : Form
+    public partial class gbulletin : Form
     {
-        public Form1()
+        public gbulletin()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void gestionbulletin_Load(object sender, EventArgs e)
         {
-           
 
         }
     }

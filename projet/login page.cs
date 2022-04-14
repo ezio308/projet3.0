@@ -75,6 +75,8 @@ namespace projet
                     {
                         this.Hide();
                         admin.Show();
+
+                        
                     }
                     else if (x == "2")
                     {
@@ -85,6 +87,7 @@ namespace projet
                     {
                         this.Hide();
                         employe.Show();
+                       
 
 
                     }

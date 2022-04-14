@@ -47,6 +47,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bulletinspdf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bulletinspdf.Designer.cs">
+      <DependentUpon>bulletinspdf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gbulletin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gbulletin.Designer.cs">
+      <DependentUpon>gbulletin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="verification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="verification.Designer.cs">
+      <DependentUpon>verification.cs</DependentUpon>
+    </Compile>
     <Compile Include="saisie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,11 +101,11 @@
     <Compile Include="login page.Designer.cs">
       <DependentUpon>login page.cs</DependentUpon>
     </Compile>
-    <Compile Include="admin.cs">
+    <Compile Include="gemploye.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="admin.Designer.cs">
-      <DependentUpon>admin.cs</DependentUpon>
+    <Compile Include="gemploye.Designer.cs">
+      <DependentUpon>gemploye.cs</DependentUpon>
     </Compile>
     <Compile Include="agent.cs">
       <SubType>Form</SubType>
@@ -97,8 +121,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="agent.resx">
       <DependentUpon>agent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bulletinspdf.resx">
+      <DependentUpon>bulletinspdf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gbulletin.resx">
+      <DependentUpon>gbulletin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modifier.resx">
       <DependentUpon>modifier.cs</DependentUpon>
@@ -109,8 +142,8 @@
     <EmbeddedResource Include="login page.resx">
       <DependentUpon>login page.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="admin.resx">
-      <DependentUpon>admin.cs</DependentUpon>
+    <EmbeddedResource Include="gemploye.resx">
+      <DependentUpon>gemploye.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ajouter.resx">
       <DependentUpon>Ajouter.cs</DependentUpon>
@@ -129,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="employe.resx">
       <DependentUpon>employe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="verification.resx">
+      <DependentUpon>verification.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

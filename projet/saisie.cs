@@ -17,6 +17,7 @@ namespace projet
     {
         SqlConnection cnx = new SqlConnection(@"Data Source=LAPTOP-NJ81HHSQ\SQLSERVER;Initial Catalog=dbdd;Integrated Security=True");
         SqlCommand cmd = new SqlCommand();
+        SqlDataReader Reader;
 
         public saisie()
         {
@@ -37,10 +38,10 @@ namespace projet
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int x = int.Parse(textBox4.Text);
+            float x = float.Parse(textBox4.Text);
             Deconnecter();
             cnx.Open();
-            cmd = new SqlCommand("INSERT INTO bulletins  VALUES ('" + textBox1.Text + "','" + dateTimePicker1.Value.ToString() + "','" + textBox3.Text + "','" + x + "','" + textBox5.Text + "')", cnx);
+            cmd = new SqlCommand("INSERT INTO bulletins(NUMBULL,datedepot,actedesc,actefrais,login) VALUES ('" + textBox1.Text + "','" + dateTimePicker1.Value.ToString() + "','" + textBox3.Text + "','" + x + "','" + textBox5.Text + "')", cnx);
             int i = cmd.ExecuteNonQuery();
 
             if (i != 0)
@@ -55,10 +56,16 @@ namespace projet
                 MessageBox.Show("verfiez les données", "resseyez", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+            this.Hide();
+            verification verif = new verification(textBox4.Text, textBox5.Text, textBox1.Text, dateTimePicker1.Value.ToString());
+            verif.Show();
+
         }
 
         private void saisie_Load(object sender, EventArgs e)
         {
+          
+
 
         }
     }
